@@ -820,7 +820,7 @@ public class Main {
 //     }
     
     
-    System.out.println("Hello from GitHub!");
+    System.out.println("Hello from GitHub and new commit!");
     
 
   }
