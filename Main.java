@@ -792,78 +792,82 @@ public class Main {
 
     //
 
-    Scanner sc = new Scanner(System.in);
+//     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Please enter number of tasks you want to add: ");
-    int numberOfTasks = sc.nextInt();
+//     System.out.println("Please enter number of tasks you want to add: ");
+//     int numberOfTasks = sc.nextInt();
 
-    String[] tasks = fillTasksArray(numberOfTasks);
+//     String[] tasks = fillTasksArray(numberOfTasks);
 
-    boolean isRunnable = true;
+//     boolean isRunnable = true;
 
-    while(isRunnable) {
-      System.out.println("Here is your task list: ");
+//     while(isRunnable) {
+//       System.out.println("Here is your task list: ");
 
-      printTaskList(tasks);
+//       printTaskList(tasks);
 
-      System.out.println("Choose the index of task you want to mark as (completed)/(not completed) or enter '999' to end the program: ");
-      int index = sc.nextInt() - 1;
+//       System.out.println("Choose the index of task you want to mark as (completed)/(not completed) or enter '999' to end the program: ");
+//       int index = sc.nextInt() - 1;
 
-      if (index == 998) {
-        System.out.println("Thanks for being with us! Bye-bye!");
-        isRunnable = false;
-      } else {
-        changeTaskList(index, tasks);
-      }
+//       if (index == 998) {
+//         System.out.println("Thanks for being with us! Bye-bye!");
+//         isRunnable = false;
+//       } else {
+//         changeTaskList(index, tasks);
+//       }
 
-      isRunnable = !checkIfAllTasksAreCompleted(tasks);
-    }
+//       isRunnable = !checkIfAllTasksAreCompleted(tasks);
+//     }
+    
+    
+    System.out.println("Hello from GitHub!");
+    
 
   }
 
-  private static boolean checkIfAllTasksAreCompleted(String[] tasks) {
-    for (int i = 0; i < tasks.length; i++) {
-      if (!tasks[i].contains("Done")) {
-        return false;
-      }
-    }
+//   private static boolean checkIfAllTasksAreCompleted(String[] tasks) {
+//     for (int i = 0; i < tasks.length; i++) {
+//       if (!tasks[i].contains("Done")) {
+//         return false;
+//       }
+//     }
 
-    printTaskList(tasks);
-    System.out.println("You are excellent! You completed all your tasks! Bye-Bye!");
-    return true;
-  }
+//     printTaskList(tasks);
+//     System.out.println("You are excellent! You completed all your tasks! Bye-Bye!");
+//     return true;
+//   }
 
-  private static void changeTaskList(int index, String[] tasks) {
-    if (tasks[index] == null) {
-      System.out.println("Sorry, there is no task with such index!");
-    } else {
-      if (tasks[index].contains("Done")) {
-        tasks[index] = tasks[index].substring(10);
-      } else {
-        tasks[index] = "(Done!) | " + tasks[index];
-      }
-    }
-  }
+//   private static void changeTaskList(int index, String[] tasks) {
+//     if (tasks[index] == null) {
+//       System.out.println("Sorry, there is no task with such index!");
+//     } else {
+//       if (tasks[index].contains("Done")) {
+//         tasks[index] = tasks[index].substring(10);
+//       } else {
+//         tasks[index] = "(Done!) | " + tasks[index];
+//       }
+//     }
+//   }
 
-  private static void printTaskList(String[] tasks) {
-    for (int i = 0; i < tasks.length; i++) {
-      System.out.println((i + 1) + ". " + tasks[i]);
-    }
-  }
+//   private static void printTaskList(String[] tasks) {
+//     for (int i = 0; i < tasks.length; i++) {
+//       System.out.println((i + 1) + ". " + tasks[i]);
+//     }
+//   }
 
-  private static String[] fillTasksArray(int numberOfTasks) {
-    String[] tasksList = new String[numberOfTasks];
+//   private static String[] fillTasksArray(int numberOfTasks) {
+//     String[] tasksList = new String[numberOfTasks];
 
-    Scanner sc = new Scanner(System.in);
+//     Scanner sc = new Scanner(System.in);
 
-    for (int i = 0; i < numberOfTasks; i++) {
-      System.out.println("You still have " + (numberOfTasks - i) + " tasks to add!");
-      System.out.println("Please enter the task you want to complete: ");
-      tasksList[i] = sc.nextLine();
-    }
+//     for (int i = 0; i < numberOfTasks; i++) {
+//       System.out.println("You still have " + (numberOfTasks - i) + " tasks to add!");
+//       System.out.println("Please enter the task you want to complete: ");
+//       tasksList[i] = sc.nextLine();
+//     }
 
-    return tasksList;
-  }
+//     return tasksList;
+//   }
 
   // static int sumOfDoubledArrayElements(int[] numbers) {
   //   int sum = 0;
